@@ -26,7 +26,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    ai_msg = msg[:6].lower()
+    ai_msg = msg[:4].lower()
     if ai_msg == 'hey:':
             # 將第六個字元之後的訊息發送給 OpenAI
             response = openai.Completion.create(
