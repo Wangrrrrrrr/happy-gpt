@@ -24,6 +24,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    if msg == "午餐吃什麼" || "晚餐吃什麼"
     lunch_options = ['便當', '麵類', '飯類', '燉飯', '三明治']
     #message = TextSendMessage(text=event.message.text)
     message = TextSendMessage(text=random.choice(lunch_options))
