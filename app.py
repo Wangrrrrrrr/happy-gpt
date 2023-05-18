@@ -27,7 +27,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     ai_msg = msg[:6].lower()
-    if ai_msg == 'hey:':
+    if ai_msg == 'hi ai:':
             # 將第六個字元之後的訊息發送給 OpenAI
             response = openai.Completion.create(
                 model='text-davinci-003',
