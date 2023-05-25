@@ -27,24 +27,13 @@ def callback():
 def handle_message(event):
     card = {
               "type": "bubble",
-              "hero": {
-                "type": "image",
-                "url": "https://lions-clubs.dev2.rib.tw/static/documents/images/Lions_Clubs_International.png",
-                "size": "full",
-                "aspectRatio": "1:1",
-                "aspectMode": "cover",
-                "action": {
-                  "type": "uri",
-                  "uri": "http://linecorp.com/"
-                }
-              },
               "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
                   {
                     "type": "text",
-                    "text": "113年度獲獎獅友名單",
+                    "text": "再睡5分鐘",
                     "weight": "bold",
                     "size": "xl"
                   }
@@ -61,8 +50,8 @@ def handle_message(event):
                     "height": "sm",
                     "action": {
                       "type": "uri",
-                      "label": "公文連結",
-                      "uri": "https://lions-clubs.dev2.rib.tw"
+                      "label": "MENU",
+                      "uri": "https://order.ocard.co/naptea/?utm_source=linktree&utm_medium=ig_bio&utm_campaign=linktree&utm_content=0624&utm_term="
                     }
                   }
                 ],
