@@ -25,7 +25,56 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+        card = {
+              "type": "bubble",
+              "hero": {
+                "type": "image",
+                "url": "https://lions-clubs.dev2.rib.tw/static/documents/images/Lions_Clubs_International.png",
+                "size": "full",
+                "aspectRatio": "1:1",
+                "aspectMode": "cover",
+                "action": {
+                  "type": "uri",
+                  "uri": "http://linecorp.com/"
+                }
+              },
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "113年度獲獎獅友名單",
+                    "weight": "bold",
+                    "size": "xl"
+                  }
+                ]
+              },
+              "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "button",
+                    "style": "link",
+                    "height": "sm",
+                    "action": {
+                      "type": "uri",
+                      "label": "公文連結",
+                      "uri": "https://lions-clubs.dev2.rib.tw"
+                    }
+                  }
+                ],
+                "flex": 0
+              }
+            }
     msg = event.message.text
+    if msg  == "發卡片":
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="發卡片", contents=card))
+        return
     ai_msg = msg[:4].lower()
     if ai_msg == 'hey:':
             # 將第六個字元之後的訊息發送給 OpenAI
