@@ -64,12 +64,6 @@ def handle_message(event):
           "label": "MENU",
           "uri": "https://order.ocard.co/naptea/?utm_source=linktree&utm_medium=ig_bio&utm_campaign=linktree&utm_content=0624&utm_term="
         }
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [],
-        "margin": "sm"
       }
     ],
     "flex": 0
