@@ -70,6 +70,11 @@ def handle_message(event):
               }
             }
     msg = event.message.text
+    if msg  == "發卡片":
+        line_bot_api.reply_message(
+            event.reply_token,
+            FlexSendMessage(alt_text="發卡片", contents=card))
+        return
     ai_msg = msg[:4].lower()
     if ai_msg == 'hey:':
             # 將第六個字元之後的訊息發送給 OpenAI
