@@ -27,6 +27,11 @@ def callback():
 def handle_message(event):
     card = {
               "type": "bubble",
+              "hero": {
+                "type": "image",
+                "url": "https://achingfoodie.tw/wp-content/uploads/20220404084736_66.jpg",
+                "size": "full"
+              },
               "body": {
                 "type": "box",
                 "layout": "vertical",
