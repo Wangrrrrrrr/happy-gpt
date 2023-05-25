@@ -26,49 +26,49 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
         card = {
-              "type": "bubble",
-              "hero": {
-                "type": "image",
-                "size": "full",
-                "aspectRatio": "20:13",
-                "aspectMode": "cover",
-                "action": {
-                  "type": "uri",
-                  "uri": "http://linecorp.com/"
-                },
-                "url": "https://achingfoodie.tw/wp-content/uploads/20220404084533_45.jpg"
-              },
-              "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "再睡5分鐘",
-                    "weight": "bold",
-                    "size": "xl"
-                  }
-                ]
-              },
-              "footer": {
-                "type": "box",
-                "layout": "vertical",
-                "spacing": "sm",
-                "contents": [
-                  {
-                    "type": "button",
-                    "style": "link",
-                    "height": "sm",
+                  "type": "bubble",
+                  "hero": {
+                    "type": "image",
+                    "size": "full",
+                    "aspectRatio": "20:13",
+                    "aspectMode": "cover",
                     "action": {
                       "type": "uri",
-                      "label": "MENU",
-                      "uri": "https://order.ocard.co/naptea/?utm_source=linktree&utm_medium=ig_bio&utm_campaign=linktree&utm_content=0624&utm_term="
-                    }
+                      "uri": "http://linecorp.com/"
+                    },
+                    "url": "https://achingfoodie.tw/wp-content/uploads/20220404084533_45.jpg"
+                  },
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "再睡5分鐘",
+                        "weight": "bold",
+                        "size": "xl"
+                      }
+                    ]
+                  },
+                  "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "button",
+                        "style": "link",
+                        "height": "sm",
+                        "action": {
+                          "type": "uri",
+                          "label": "MENU",
+                          "uri": "https://order.ocard.co/naptea/?utm_source=linktree&utm_medium=ig_bio&utm_campaign=linktree&utm_content=0624&utm_term="
+                        }
+                      }
+                    ],
+                    "flex": 0
                   }
-                ],
-                "flex": 0
-              }
-            }
+                }
     msg = event.message.text
     if msg  == "發卡片":
         line_bot_api.reply_message(
