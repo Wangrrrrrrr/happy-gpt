@@ -64,10 +64,10 @@ def handle_message(event):
               }
             }
     msg = event.message.text
-    if msg  == "發卡片":
+    if msg  == "喝飲料":
         line_bot_api.reply_message(
             event.reply_token,
-            FlexSendMessage(alt_text="發卡片", contents=card))
+            FlexSendMessage(alt_text="喝飲料", contents=card))
         return
     ai_msg = msg[:4].lower()
     if ai_msg == 'hey:':
